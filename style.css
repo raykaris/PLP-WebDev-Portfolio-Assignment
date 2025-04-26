@@ -151,6 +151,7 @@ ul li {
 .about img {
     height: 100%;
     width: 100%;
+    object-fit: contain;
 }
 
 .details {
@@ -244,7 +245,32 @@ ul li {
     text-align: center;
 }
 
+/* projects styles*/
+.portfolio {
+    background-color: #f6f6f6;
+    padding: 50px 20px;
+    text-align: center;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+.title h2 {
+    margin-bottom: 50px;
+}
 
+.images-grid { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain; 
+    border-radius: 10px;
+}
 
 
 
@@ -264,7 +290,7 @@ ul li {
         font-size: 20px;
         margin-left: 0;
     }
-    #navbar-hero .row img {
+    #navbar-hero #hero .row img {
         display: none;
     }
     .details {
