@@ -61,15 +61,45 @@ ul li {
 #navbar-hero {
     background-image: url("assets/img/bg-1.jpeg");
     background-position: 20% 30%;
-    background-color: #041e42;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    position: relative;
+}
+
+/* adds the green color on the image background*/
+#navbar-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #033e3ec7; 
+    z-index: 1; 
+}
+
+#navbar-hero * {
+    z-index: 2; /* This ensures that all elements inside #navbar-hero are above the background */
+}
+
+#navbar-hero #hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .navbar {
     background: transparent;
+    width: 100%;
+    color: #fff;
 }
+
+.navbar-nav .nav-item a {
+    color: #fff;
+}
+
 
 .navbar .btn-green {
     margin-left: 8px;
@@ -90,6 +120,13 @@ ul li {
 .navbar .icons:hover {
     cursor: pointer;
     color: #033e3e;
+}
+
+#navbar-hero #hero .container .row-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .details {
@@ -120,4 +157,68 @@ ul li {
 
 .buttons {
     margin-top: 25px;
+}
+
+
+
+
+
+
+
+/*Media Queries*/
+@media (max-width: 999px) {
+    .section-p1 {
+        padding: 20px 10px;
+    }
+    .section-m1 {
+        margin: 20px 0;
+    }
+    .navbar .btn-green {
+        margin-left: 0;
+    }
+    .navbar .icons {
+        font-size: 20px;
+        margin-left: 0;
+    }
+    #navbar-hero .row img {
+        display: none;
+    }
+    .details {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+@media (max-width: 480px) {
+    .section-p1 {
+        padding: 10px 5px;
+    }
+    .section-m1 {
+        margin: 10px 0;
+    }
+    p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    #navbar-hero .row img {
+        display: none;
+    }
+    .navbar .btn-green {
+        margin-left: 0;
+    }
+    .navbar .icons {
+        font-size: 18px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .details {
+        flex-direction: column;
+        align-items: start;
+    }
+    .buttons {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
