@@ -80,7 +80,7 @@ ul li {
 }
 
 #navbar-hero * {
-    z-index: 2; /* This ensures that all elements inside #navbar-hero are above the background */
+    z-index: 2; /* ensures that all elements inside #navbar-hero are above the background */
 }
 
 #navbar-hero #hero {
@@ -129,6 +129,8 @@ ul li {
     
 }
 
+
+/* bio styles*/
 .details {
     display: flex;
     justify-content: space-between;
@@ -159,6 +161,66 @@ ul li {
     margin-top: 25px;
 }
 
+/* skills styles*/
+#abilities {
+    background-color: #F5E6C8;
+}
+
+.able {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.skills .card{
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #000;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+.skills .card span{
+    display: inline-block;
+    color: #012727;
+    padding: 2px 9px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.skills .card h4{
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.skills .card p{
+    margin-bottom: 1rem;
+}
+
+.more {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 30px;
+    color: #007b5e;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
 
 
 
