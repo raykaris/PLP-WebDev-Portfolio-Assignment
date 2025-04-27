@@ -69,7 +69,7 @@
                 <div class="row">
                     <div class="Me col-lg-6 col-md-12 col-sm-12">
                         <h1 style="color: #fff;">Hi, I'm John Watson</h1>
-                        <p id="multi-text"></p>
+                        <p class="multi-text"></p>
                         <p style="color: #fff;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
                         <div class="buttons">
                           <a href="#" class="btn-green">Hire Me</a>
@@ -266,10 +266,20 @@
     </section>
     
     <script src="script.js"></script>
-    <!--scroll reveal-->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    
     <!--typed js-->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+    // Initialize Typed.js
+    const typed = new Typed('.multi-text', {
+    strings: ['Web Developer', 'App Developer', 'Photographer'],
+    typedSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true,
+    showCursor: false
+    });
+    </script>
     <!--bootstrap js cdn link-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>

@@ -159,6 +159,13 @@ ul li {
     justify-content: center;
     align-items: flex-start;
 }
+
+#navbar-hero #hero .row .Me .multi-text {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--normal-white);
+}
+
 #navbar-hero #hero .row .Me .buttons {
     display: flex;
     gap: 10px;
