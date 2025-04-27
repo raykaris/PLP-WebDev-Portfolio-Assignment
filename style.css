@@ -16,6 +16,14 @@
     --img-bg-color: #033e3ec7;
 }
 
+body {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.5s, color 0.5s;
+    min-height: 100vh;
+}
+
+/* global styles */
 .section-p1 {
     padding: 40px 80px;
 }
@@ -70,6 +78,7 @@ ul li {
     text-align: center;
 }
 
+/* navbar-hero styles */
 #navbar-hero {
     background-image: url("assets/img/bg-1.jpeg");
     background-position: 20% 30%;
@@ -95,7 +104,7 @@ ul li {
     z-index: 2; /* ensures that all elements inside #navbar-hero are above the background */
 }
 
-
+/* navbar styles */
 .navbar {
     background: transparent;
     width: 100%;
@@ -123,11 +132,20 @@ ul li {
     margin-left: 9px;
 }
 
-.navbar .icons:hover {
+.navbar .icons i:hover {
     cursor: pointer;
     color: var(--secondary);
 }
 
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    transition: color 0.5s;
+}
+
+/* #hero styles */
 #navbar-hero #hero {
     display: flex;
     justify-content: center;
@@ -201,6 +219,11 @@ ul li {
     background-color: #F5E6C8;
 }
 
+.dark #abilities {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
 .able {
     display: flex;
     justify-content: center;
@@ -257,13 +280,100 @@ ul li {
     text-align: center;
 }
 
-/* projects styles*/
-.portfolio {
-    background-color: #f6f6f6;
-    text-align: center;
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
+
+/* Skills-2 styles */
+#skills-section {
+    padding: 50px;
+    height: auto;
 }
+
+.dark #skills-section {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+  
+#skills-section .skills-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#skills-section .skills-image {
+    width: 50%;
+    height: 500px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+#skills-section .skills-image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+  
+#skills-section .skills-content {
+    width: 50%;
+}
+  
+#skills-section .skills-content h5 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+  
+#skills-section .skills-content h2 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+  
+#skills-section .skills-content p {
+    margin-bottom: 20px;
+}
+  
+#skills-section .skill {
+    margin-bottom: 20px;
+}
+  
+#skills-section .skill p {
+    margin: 0 0 5px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+  
+#skills-section .progress-bar {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 5px;
+}
+  
+#skills-section .progress {
+    height: 5px;
+    background-color: #008060;
+}
+
+/* projects styles*/
+#portfolio {
+    background-color: #f6f6f6;
+    
+}
+
+.dark #portfolio {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .title h2 {
     margin-bottom: 50px;
 }
@@ -272,10 +382,9 @@ ul li {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto); 
-    gap: 20px;
+    gap: 10px;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .images-grid .image-container {
@@ -345,6 +454,33 @@ ul li {
         flex-direction: column;
         align-items: start;
     }
+    /* skills-section */
+    #skills-section {
+        padding: 30px;
+        height: auto;
+    }
+
+    #skills-section .skills-container {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    #skills-section .skills-image {
+        width: 100%;
+        height: auto;
+    }
+
+    #skills-section .skills-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    #skills-section .skills-content {
+        width: 100%;
+    }
+
     /*portfolio*/
     .images-grid {
         grid-template-columns: repeat(2, 1fr);
