@@ -77,6 +77,9 @@ ul li {
     width: 140px;
     text-align: center;
 }
+.btn-port:hover {
+    background: var(--img-bg-color);
+}
 
 /* navbar-hero styles */
 #navbar-hero {
@@ -105,10 +108,14 @@ ul li {
 }
 
 /* navbar styles */
-.navbar {
+#navbar-hero .navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
     background: transparent;
     width: 100%;
     color: var(--normal-white);
+    z-index: 999;
 }
 
 .navbar-nav .nav-item a {
@@ -452,7 +459,7 @@ ul li {
     flex-direction: column;
 }
 
-.title h2 {
+.title{
     margin-bottom: 50px;
 }
 
@@ -650,6 +657,16 @@ footer p {
         flex-direction: column;
         align-items: start;
     }
+
+    /* abilities */
+    #bio .row .bio-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+
     /* skills-section */
     #skills-section {
         padding: 30px;
@@ -675,6 +692,11 @@ footer p {
 
     #skills-section .skills-content {
         width: 100%;
+    }
+
+    /* more-skills */
+    .service-img{
+        margin-left: 250px;
     }
 
     /* counter-section */
@@ -771,7 +793,7 @@ footer p {
         grid-template-columns: 1fr;
     }
     .more-skills .service-img {
-        width: 50%;
+        display: none;
     }
 
     /* counter-section */
